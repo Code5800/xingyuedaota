@@ -1,0 +1,283 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width. initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0"> <meta name="keywords" content="星月刀塔"> <meta name="description" content="星月刀塔"> <title>星月刀塔</title> <link rel="stylesheet" href="static/css/tgdown.css"> <link href="static/css/default.css" rel="stylesheet"> </head> <body> <div class="con"> <div class="banner"> <img src="static/picture/index_01.jpg"> </div> <div class="link"> <a class="qqjump kefu" style="text-decoration:none;" target="_blank" href="javascript:void();"> <img src="static/picture/qq.png"> <div class="kefuR"> <h2>
+					客服QQ
+				</h2> <p id="qqcontact">
+					124578910
+				</p> </div> </a> <a class="apkjump linka" target="_blank" href="javascript:void();"> <img src="static/picture/index_04.jpg"> </a> <a class="iosjump linka" target="_blank" href="javascript:void();"> <img src="static/picture/index_06.jpg"> </a> </div> <div class="box" style="border: 0;background: none"> <div class="banner"> <img src="static/picture/new_03.png"> </div> </div> <div class="box"> <h2>
+				用户注册
+			</h2> <form name="post" method="post" id="reg" class="js-ajax-forms" action="/index.php?g=Channel&amp;m=Down&amp;a=register"> <input type="hidden" name="ag" value="937"> <input type="hidden" name="gid" value="3"> <div class="inshuru"> <img src="static/picture/index_11.jpg"> <input name="username" id="username" type="text" placeholder="请输入账号，仅限字母与数字"> </div> <div class="inshuru"> <img src="static/picture/index_14.jpg"> <input type="password" name="password" id="password" placeholder="请输入登录密码"> </div> <div class="inshuru"> <img src="static/picture/index_14.jpg"> <input type="password" name="repassword" id="repassword" placeholder="请确认登录密码"> </div> <div class="zhucebtn"> <button type="submit" value="">立即注册</button> </div> </form> </div> <div class="intro"> <h2>
+			游戏介绍
+		</h2> <img src="static/picture/new_07.png" width="100%"> </div> <a class="qqjump" style="text-decoration:none;" target="_blank" href="javascript:void();"> <div class="intro" style="background: #250707"> <h2>
+			豪礼赠送
+		</h2> <h3> <img src="static/picture/index_20.png"> </h3> <p> <img src="static/picture/index_23.jpg"> </p> </div> </a> </div> <script src="static/js/jquery-2.1.1.min.js"></script> <script src="static/js/common.js"></script> <script src="static/js/jquery.touch.js"></script> <script src="static/js/common_wap.js"></script> <script src="static/js/jquery.slideimg.js"></script> <script src="static/js/index_wap.js"></script> <script src="static/js/model.js"></script> <script type="text/javascript">
+var GV = {
+	DIMAUB: "/",
+	ROOT: "/",
+	WEB_ROOT: "/",
+	JS_ROOT: "public/js/",
+	TOKEN: "",
+	APP:'Channel'/*当前应用名*/
+};
+</script> <script src="static/js/wind.js"></script> <script src="static/js/validate.js"></script> <script src="static/js/ajaxForm.js"></script> <script type="text/javascript">
+	 function is_weixin() {
+		  var ua = navigator.userAgent.toLowerCase();
+		  if (ua.match(/MicroMessenger/i) == "micromessenger") {
+				return true;
+		  } else {
+				return false;
+		  }
+	 }
+	 function is_mobileQQ() {
+		  var ua = navigator.userAgent.toLowerCase();
+//alert(ua);
+		  if (ua.match(/qq/i) == "qq" || ua.match(/tim/i) == "tim"){
+				return true;
+		  }
+		  else {
+				return false;
+		  }
+	 }
+	 var isWeixin = is_weixin();
+	 var isMobileQQ = is_mobileQQ();
+	 var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+	 var weixinTip = $('<div id="weixinTip"><p><img id="img" src="/data/upload/live_weixin.png" alt="微信打开"/></p></div>');
+	 if(isWeixin ){
+		  //$("body").append(weixinTip);
+	 }
+	 if(isMobileQQ){
+		  //$("body").append(weixinTip);
+	 }
+	 $("#img").css({
+		  "max-width":"100%",
+		  "height":"411px"
+	 });
+	 $("#weixinTip").css({
+		  "position":"fixed",
+		  "left":"0",
+		  "top":"0",
+		  "height":winHeight,
+		  "width":"100%",
+		  "z-index":"1000",
+		  "background-color":"rgba(0,0,0,0.8)",
+		  "filter":"alpha(opacity=80)",
+	 });
+	 $("#weixinTip p").css({
+		  "text-align":"center",
+		  "margin-top":"10",
+		  "padding-left":"5%",
+		  "padding-right":"5%"
+	 });
+
+function GetUrlParam(name)
+{
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if (r!=null) return  unescape(r[2]);
+	return null;
+}
+function checkNullParam(p) {
+	if (p !=null && p.toString().length>0)
+	{
+		return true;
+	}
+	return false;
+}
+var base = 'http://tagam.oss-cn-guangzhou.aliyuncs.com/games/';
+var ag = 'dt012';
+var ver = 803;
+//var fullurl = GetUrlParam('u');
+var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+
+//$('.apkjump').attr('href',[base,'android/',ag,'/dota_',ag,'_',ver,'.apk'].join(''));
+//$('.apkjump').attr('href','http://43.241.16.117:8777/d47.apk');
+//$('.apkjump').attr('href','http://d.385sy.com:8667/d84.apk');
+$('.apkjump').attr('href','http://nd.359sy.com:8667/a359.apk');
+$('.iosjump').attr('href','itms-services:///?action=download-manifest&url=https://tagam.oss-cn-guangzhou.aliyuncs.com/games/ios/plist/dota.plist');
+var qq = '1752774622';
+var qun = '675826921';
+var qstrarr = [];
+if (checkNullParam(qq)) {
+	if (isAndroid) {
+		$('.qqjump').attr('href',['mqqwpa://im/chat?chat_type=wpa&uin=',qq,'&version=1&src_type=web'].join(''));
+	} else if (isiOS) {
+		$('.qqjump').attr('href',['mqq://im/chat?chat_type=wpa&uin=',qq,'&version=1&src_type=web'].join(''));
+	} else {
+		$('.qqjump').attr('href',['http://wpa.qq.com/msgrd?v=3&uin=',qq,'&site=qq&menu=yes'].join(''));
+	}
+	//qstrarr = ['QQ: ', qq];
+	qstrarr = [qq];
+} else {
+	$('.qqjump').attr('target', '_self');
+}
+if (0 != qun && checkNullParam(qun)) {
+	//qstrarr.push('  QQ群:', qun);
+}
+if (0 != qstrarr.length) {
+	$('#qqcontact').text(qstrarr.join(''));
+}
+</script> <script>
+var _promote_regerrmsg;
+Wind.use('validate', 'ajaxForm', 'artDialog', function () {
+	$.validator.addMethod('namestring', function(value, element) {
+		return this.optional(element) || /^[0-9A-Za-z]{5,12}$/.test(value);
+	}, '只能包括中文字、英文字母、数字和下划线');
+	$.validator.addMethod('nameremote', function(value, element){
+		if (this.optional(element)) {
+			return true;
+		}
+		var c_username = $('#username').val();
+		var myreg = /^[0-9A-Za-z]{5,12}$/; 
+		if(!myreg.test(c_username)){
+			return false;
+		}
+		_promote_regerrmsg = 1;
+		$.ajax({
+			url:"/index.php?g=channel&m=down&a=chk_usr",
+			type:'POST',
+			async:false,
+			data:{
+				username:$("#username").val(),password:$("#password").val(),repassword:$("#repassword").val()
+			},
+			dataType:'json',	 //返回的数据格式：json/xml/html/script/jsonp/text
+			//contentType: 'application/json',
+			success:function(data){
+				_promote_regerrmsg = data.msg;
+			}
+		});
+		
+		if(isNaN(_promote_regerrmsg)){
+			return false;
+		}else{
+			return true;
+		}
+	}, '用户名不可用');
+	//javascript
+	var form = $('form.js-ajax-forms');
+	//ie处理placeholder提交问题
+	if ($.browser.msie) {
+		form.find('[placeholder]').each(function () {
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+				input.val('');
+			}
+		});
+	}
+	//表单验证开始
+	form.validate({
+		//是否在获取焦点时验证
+		onfocusout: false,
+		//是否在敲击键盘时验证
+		onkeyup: false,
+		//当鼠标掉级时验证
+		onclick: false,
+		//验证错误
+		showErrors: function (errorMap, errorArr) {
+			//errorMap {'name':'错误信息'}
+			//errorArr [{'message':'错误信息',element:({})}]
+			try {
+				$(errorArr[0].element).focus();
+				var emsg = errorArr[0].message;
+				if(typeof(_promote_regerrmsg) != "undefined" && isNaN(_promote_regerrmsg)){
+					emsg = _promote_regerrmsg;
+				}
+				$('.aui_outer').css('font-size', '18px');
+				art.dialog({
+					id: 'error',
+					icon: 'error',
+					lock: true,
+					fixed: true,
+					background: "#CCCCCC",
+					opacity: 0,
+					content: emsg,
+					cancelVal: '确定',
+					cancel: function () {
+						$(errorArr[0].element).focus();
+						$('.aui_outer').css('font-size', '18px');
+					}
+				});
+			} catch (err) {
+			}
+		},
+		//验证规则
+		rules: {
+			'username': {required: 1, namestring: 1, nameremote: 1},
+			'password': {required: 1},
+			'repassword': {required: 1, equalTo:'#password'}
+		},
+		//验证未通过提示消息
+		messages: {
+			'username': {required: '请输入用户名',
+				namestring:'用户名必须是5到12位的字母或数字',
+				nameremote:'用户名长度至少6位,最多20位;不能全为数字。密码长度至少5位，最多20位'
+				}, 
+			'password': {required: '请输入密码'},
+			'repassword': {
+				required: '请第二次输入密码',
+				equalTo:'第二次输入密码必须和第一次相同'
+				}
+		},
+		//给未通过验证的元素加效果,闪烁等
+		highlight: false,
+		//是否在获取焦点时验证
+		onfocusout: false,
+		//验证通过，提交表单
+		submitHandler: function (forms) {
+			$(forms).ajaxSubmit({
+				url: form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+				dataType: 'json',
+				beforeSubmit: function (arr, $form, options) {
+				},
+				success: function (data, statusText, xhr, $form) {
+					if (data.status) {
+						setCookie("refersh_time", 1);
+						//添加成功
+						Wind.use("artDialog", function () {
+							$('.aui_outer').css('font-size', '18px');
+							art.dialog({
+								id: "succeed",
+								icon: "succeed",
+								fixed: true,
+								lock: true,
+								background: "#CCCCCC",
+								opacity: 0,
+								content: data.info,
+								button: [
+									{
+										name: '确定',
+										callback: function () {
+											$('.aui_outer').css('font-size', '18px');
+											return true;
+										}
+									}
+								]
+							});
+						});
+					} else {
+						$('.aui_outer').css('font-size', '18px');
+						art.dialog({
+							id: 'error',
+							icon: 'error',
+							lock: true,
+							fixed: true,
+							background: "#CCCCCC",
+							opacity: 0,
+							content: data.info,
+							button: [
+								{
+									name: '确定',
+									callback: function () {
+										$('.aui_outer').css('font-size', '18px');
+										return true;
+									}
+								}
+							]
+						});
+					}
+				}
+			});
+		}
+	});
+});
+//$('#reg').submit();
+</script> </body> </html>
