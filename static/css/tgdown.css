@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 640px;
+    margin: 0 auto;
+}
+.banner{
+
+}
+.banner img{
+
+    width: 100%;
+}
+.link{
+    overflow: hidden;
+    width: 90%;
+    margin: 7px auto 6px;
+}
+
+.link a{
+
+    float: left;
+
+    width: 31%;
+
+    margin: 1%;
+
+    /* height: 63px; */
+}
+.kefu{
+    background: url(../image/kefbg.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+}
+.kefu img{
+
+    width: 35px;
+
+    margin: 7px;
+}
+.kefuR{}
+
+.kefuR h2{
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: normal;
+}
+.kefuR p{
+
+    color: #fff;
+}
+.linka{
+
+}
+.linka img{
+
+    /* height: 63px; */
+
+    width: 100%;
+}
+.box{
+
+    background: #4c4c4c;
+
+    border-top: 5px solid #e7b400;
+
+    color: #fff;
+
+    font-size: 15px;
+
+    margin: 0px auto 15px;
+
+    width: 90%;
+
+    overflow: hidden;
+
+    padding-bottom: 12px;
+}
+.box p{
+
+    padding: 10px;
+
+    line-height: 21px;
+
+    font-size: 14px;
+}
+.box h2{
+
+    text-align: right;
+
+    font-weight: normal;
+
+    width: 90%;
+
+    margin: 20px auto;
+
+    font-size: 16px;
+
+    overflow: hidden;
+}
+.inshuru{
+
+    display: flex;
+
+    align-items: center;
+
+    width: 90%;
+
+    background: #fff;
+
+    margin: 15px auto;
+
+    width: 88%;
+}
+.inshuru img{
+
+    vertical-align: middle;
+
+    height: 37px;
+}
+.inshuru input{
+
+    vertical-align: middle;
+
+    height: 34px;
+
+    padding-left: 10px;
+
+    width: 83%;
+
+    border: 0;
+
+    outline: none;
+
+    font-size: 14px;
+}
+.zhucebtn{
+    background: url(../image/t1.png) no-repeat;
+    background-size: 100% 100%;
+    width: 88%;
+    margin: 15px auto;
+}
+.zhucebtn button{
+    width:100%;
+    height: 46px;
+    background: none;
+    color: #fff;
+    border: 0;
+    font-size: 17px;
+    text-align: center;
+}
+.intro{
+
+    background: #3b1e1f;
+
+    margin: 15px auto;
+
+    color: #fff;
+
+    padding-bottom: 12px;
+
+    width: 90%;
+}
+.intro h2{
+
+    text-align: center;
+
+    height: 56px;
+
+    line-height: 49px;
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+    background: url(../image/titlebg.png) no-repeat;
+
+    background-size: 100% 100%;
+}
+.intro p{
+
+    width: 96%;
+
+    margin: 10px auto;
+
+    font-size: 14px;
+
+    line-height: 18px;
+}
+.intro p  img{
+
+    width: 93%;
+
+    margin: 0 auto;
+
+    display: block;
+}
+.intro h3{
+
+    text-align: center;
+}
+.intro h3 img{
+
+    width: 80%;
+}
+
+@media (max-width: 568px) {
+    .kefu img {
+        width: 21px;
+        margin: 5px;
+    }
+    .kefuR h2 {
+        color: #fff;
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .kefuR p{
+        font-size: 12px;
+    }
+    .zhucebtn input {
+        width: 100%;
+        /* opacity: 0; */
+        height: 38px;
+        font-size: 15px;
+    }
+    .inshuru img {
+        vertical-align: middle;
+        height: 35px;
+    }
+    .intro h2 {
+        text-align: center;
+        height: 49px;
+        line-height: 49px;
+        font-size: 18px;
+    }
+    .linka img{
+        height: 36px;
+    }
+    .kefu{
+     height: 36px;
+    }
+}
